@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts - prins every character of a string
+ * puts2 - prins every character of a string
  *
  * @str: string parameter input
  *
