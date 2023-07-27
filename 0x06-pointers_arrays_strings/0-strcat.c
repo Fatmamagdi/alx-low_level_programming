@@ -5,7 +5,7 @@
  *		two strings .
  *
  * @dest: pointer to destnation input
- * @arc: pointer to source input
+ * @src: pointer to source input
  *
  * Return: pointer to resulting string @dest
  */
@@ -23,5 +23,6 @@ char *_strcat(char *dest, char *src)
 	for (c2 = 0; src[c2] ; c2++)
 		/*append src[c2] to dest[c] while overwritting the null byte in dest*/
 		dest[c++] = src[c2];
+
 	return (dest);
 }
