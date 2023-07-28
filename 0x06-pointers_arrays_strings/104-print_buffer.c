@@ -23,12 +23,12 @@ void printHexes(char *b, int start, int end)
 {
 	int i = 0;
 
-	while (i < end)
+	while (i < 10)
 	{
 		if (i < end)
 			printf("%02x", *(b + start + i));
 		else
-			printf(" ");
+			printf("  ");
 		if (i % 2)
 			printf(" ");
 		i++;
