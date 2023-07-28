@@ -47,7 +47,7 @@ char *cap_string(char *s)
 			founDelimit = 1;
 		else if (isLower(*s) && foundDelimit)
 		{
-			*s -= 32;
+			*s += 32; //Increment ASCII value capitalize the letter
 			foundDelimit = 0;
 		}
 		else
