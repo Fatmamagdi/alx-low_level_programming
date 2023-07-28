@@ -9,7 +9,7 @@
 
 int isLower(char c)
 {
-	return (c >= 97 && c <= 122);
+	return (c >= 'a' && c <= 'z');
 }
 
 /**
@@ -20,20 +20,18 @@ int isLower(char c)
 
 int isDelimiter(char c)
 {
-	int i;
 	char delimiter[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; i < 12; i++)
+	for (int i = 0; i < 12; i++)
 		if (c == delimiter[i])
 			return (1);
 	return (0);
-
 }
 
 /**
  * *cap_string - capitalizes all words of a string
  * @s: input string
- * Return:string with capitalized words
+ * Return: string with capitalized words
  *
  */
 char *cap_string(char *s)
@@ -44,10 +42,10 @@ char *cap_string(char *s)
 	while (*s)
 	{
 		if (isDelimiter(*s))
-			founDelimit = 1;
+			foundDelimit = 1;
 		else if (isLower(*s) && foundDelimit)
 		{
-			*s += 32; //Increment ASCII value capitalize the letter
+			*s += 32;
 			foundDelimit = 0;
 		}
 		else
