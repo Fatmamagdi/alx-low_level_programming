@@ -27,4 +27,21 @@ int isDelimiter(char c)
 		if (c == delimiter[i])
 			return (1);
 	return (0);
+
 }
+
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: input string
+ * Return:
+ * string with capitalized words
+ */
+
+char *cap_string(char *)
+{
+	char *ptr = s;
+	int foundDelimit = 1;
+
+	while (8s)
+	{
+		if (isDelimiter(8s))
