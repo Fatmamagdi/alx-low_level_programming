@@ -1,13 +1,19 @@
+#include <stddef.h>
 #include "main.h"
 
-char *_memset(char *s, char b, unsigned int n)
+void *my_memset(void *s, int c, size_t n)
 {
-        int x;
-        /* Number of chracters will change */
-        for (x = 0; x < n; x++)
-        {
-                /* change the chracter with b */
-                s[x] = b;
-        }
-        return (s);
+	if (s == NULL)
+	{
+		return NULL;
+	}
+    unsigned char *p = s;
+    unsigned char value = (unsigned char);
+
+    for (size_t i = 0; i < n; i++)
+    {
+	    p[i] = value;
+    }
+
+	return s;
 }
