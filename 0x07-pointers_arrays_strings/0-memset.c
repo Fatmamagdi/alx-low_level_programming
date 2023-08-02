@@ -1,19 +1,20 @@
-#include <stddef.h>
 #include "main.h"
 
-void *my_memset(void *s, int c, size_t n)
+/**
+ * *_memset - fills memory with a constant byte.
+ * @s: pointer to put the constant
+ * @b: constant
+ * @n: max bytes to use
+ * Return: pointer s
+ */
+
+char *_memset(char *s, char b, unsigned int n)
 {
-	if (s == NULL)
+	unsigned int itr;
+
+	for (itr = 0; n > 0; itr++, n--)
 	{
-		return NULL;
+		s[itr] = b;
 	}
-    unsigned char *p = s;
-    unsigned char value = (unsigned char);
-
-    for (size_t i = 0; i < n; i++)
-    {
-	    p[i] = value;
-    }
-
-	return s;
+	return (s);
 }
