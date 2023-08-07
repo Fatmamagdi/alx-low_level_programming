@@ -25,10 +25,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 
 		if (!*needle_iter)
-			return haystack;
+			return (haystack);
 
 		haystack++;
 	}
 
-	return NULL;
+	return (NULL);
 }
